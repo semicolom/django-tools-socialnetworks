@@ -14,6 +14,7 @@ setup(
     include_package_data=True,
     description='Simple Django app to manage a website social network links',
     long_description=README,
+    long_description_content_type="text/markdown",
     author='Toni Colom',
     author_email='toni@semicolom.com',
     url='https://github.com/semicolom/django-tools-socialnetworks',

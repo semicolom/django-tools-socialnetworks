@@ -53,9 +53,13 @@ class AbstractSocialNetwork(models.Model):
             for social_network_id, social_network_info in cls.SOCIAL_NETWORKS.items()
         ]
 
+    @classmethod
+    def get_social_networks(cls):
+        return cls.objects.all()
+
     @property
     def info(self):
-        return self.SOCIAL_NETWORKS.get(self.social_network)
+        return self.SOCIAL_NETWORKS.get(self.social_network, {})
 
     def get_name(self):
         return self.info.get('name')
@@ -65,10 +69,6 @@ class AbstractSocialNetwork(models.Model):
 
     def get_icon(self):
         return self.info.get('icon')
-
-    @classsmethod
-    def get_social_networks(cls):
-        return cls.objects.all()
 
 
 class SocialNetwork(AbstractSocialNetwork):

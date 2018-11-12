@@ -66,6 +66,10 @@ class AbstractSocialNetwork(models.Model):
     def get_icon(self):
         return self.info.get('icon')
 
+    @classsmethod
+    def get_social_networks(cls):
+        return cls.objects.all()
+
 
 class SocialNetwork(AbstractSocialNetwork):
     pass

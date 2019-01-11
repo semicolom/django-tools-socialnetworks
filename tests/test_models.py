@@ -22,6 +22,8 @@ class SocialNetworkTestCase(TestCase):
             ('youtube', "YouTube"),
             ('vimeo', "Vimeo"),
             ('github', "GitHub"),
+            ('behance', "Behance"),
+            ('pinterest', "Pinterest"),
         ]
         self.assertEqual(choices, expected_choices)
 

@@ -33,6 +33,16 @@ class AbstractSocialNetwork(models.Model):
             'link': 'https://github.com/',
             'icon': 'github',
         },
+        'behance': {
+            'name': 'Behance',
+            'link': 'https://www.behance.net/',
+            'icon': 'behance',
+        },
+        'pinterest': {
+            'name': 'Pinterest',
+            'link': 'https://pinterest.com/',
+            'icon': 'pinterest',
+        },
     }
 
     social_network = models.CharField(max_length=255)

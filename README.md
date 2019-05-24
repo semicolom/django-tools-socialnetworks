@@ -36,7 +36,9 @@ def get_context_data(self, **kwargs):
     return context
 ```
 
-4. Include social_networks.html snippet in your template or override it.
+4. Run migrations commands `python manage.py migrate`
+
+5. Include social_networks.html snippet in your template or override it.
 ```
 {% include "djtools/socialnetworks/social_networks.html" %}
 ```
